@@ -10,8 +10,9 @@ backend/venv
 backend/.venv
 venv/
 .venv/
-backend/__pycache__
-backend/*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
 backend/.env
 
 # OS
