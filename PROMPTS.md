@@ -13,3 +13,6 @@ This document records every prompt used to build **TheVibeStreamer**.
 
 ## 4. Streaming Chat Frontend (TDD)
 - **Prompt:** "Ahora implementa la fase frontend en Next.js. El backend ya envía SSE, así que necesito que el proxy route.ts preserve ese streaming y no convierta la respuesta a JSON. Después, actualiza la UI en page.tsx para leer el stream en tiempo real y mostrar la respuesta del asistente de forma progresiva, como un chat que escribe palabra por palabra. También ajusta los tests de home.test.tsx con enfoque TDD para validar ese comportamiento incremental. Resultado esperado: al enviar un mensaje, la respuesta aparece en vivo en pantalla y las pruebas de frontend quedan positivas."
+
+## 5. UI Improvements & Interaction Logic (TDD)
+- **Prompt:** "Mejora la interfaz del chat, vamos a implementar un borrado del input cuando el usuario hace submit. Quiero que los estilos del chat sean mas oscuros, teniendo cuidado con los textos para que sean legibles en todo momento. Cuando se esta renderizando el mensaje del stream, debemos bloquear el boton de enviar para no permitir mas envios hasta que el stream termina de renderizar, añade un loader para representar esa pausa."
