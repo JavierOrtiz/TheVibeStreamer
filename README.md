@@ -21,7 +21,21 @@ A real-time LLM streaming prototype built with Next.js and FastAPI, strictly fol
 
 The easiest way to get the project up and running is using Docker Compose. This will orchestrate both the backend and frontend services.
 
-### 1. Build and Start the Containers
+### 1. Configure LLM Provider and API Keys
+
+Before running the project, you must select your LLM provider and provide the corresponding API key. 
+
+Open the `docker-compose.yml` file and update the `backend` environment variables:
+
+```yaml
+    environment:
+      - LLM_PROVIDER=gemini # Options: gemini, openai, claude
+      - GEMINI_API_KEY=your_actual_key
+      - OPENAI_API_KEY=your_actual_key
+      - ANTHROPIC_API_KEY=your_actual_key
+```
+
+### 2. Build and Start the Containers
 
 From the project root directory (`TheVibeStreamer/`), run:
 

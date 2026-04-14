@@ -16,3 +16,9 @@ This document records every prompt used to build **TheVibeStreamer**.
 
 ## 5. UI Improvements & Interaction Logic (TDD)
 - **Prompt:** "Mejora la interfaz del chat, vamos a implementar un borrado del input cuando el usuario hace submit. Quiero que los estilos del chat sean mas oscuros, teniendo cuidado con los textos para que sean legibles en todo momento. Cuando se esta renderizando el mensaje del stream, debemos bloquear el boton de enviar para no permitir mas envios hasta que el stream termina de renderizar, añade un loader para representar esa pausa."
+
+## 6. LLM Model Orchestrator (DDD + TDD)
+- **Prompt:** "Implementa un orquestador de modelos LLM. La idea es simple: según la variable de entorno que esté activa, el sistema debe elegir automáticamente qué proveedor usar: Gemini, OpenAI o Claude. Cuando llegue un prompt del usuario a la API, debe enviarlo al modelo activo y devolver la respuesta en streaming. También quiero hacerlo con enfoque TDD, crea test que fallen y luego implementa lo mínimo para que pasen. Un orquestador con una interfaz común para los 3 proveedores. Selección del proveedor por ENV (con manejo claro de errores si falta configuración). Integración en el endpoint de la API que recibe el prompt. Respuesta por stream desde el proveedor activo. Actualiza el Docker con las ENV variables necesarias.
+Añade las dependencias necesarias para realmente comunicarnos con el modelo activo, definiendo las variables de API token 
+para obtener mensajes reales. Actualiza el README para que el usuario sepa que es necesario configurar el modelo a usar y 
+su correspondiente API key."
