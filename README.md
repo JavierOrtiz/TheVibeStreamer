@@ -117,6 +117,18 @@ docker compose down
 
 ---
 
+## 🚀 Future Iterations
+
+The following features are planned for future development to enhance the platform's capabilities and scalability:
+
+1. **In-Chat Model Selection:** Allow users to switch between LLM providers and specific models directly within the chat interface.
+2. **Message Persistence & History:** Implement database storage to persist chat sessions and allow users to revisit their conversation history.
+3. **Token Usage Metrics:** Add real-time calculation of token consumption and cost metrics per request/session.
+4. **Session Rate Limiting:** Implement message limits per session to control costs and prevent unnecessary token expenditure.
+5. **Smart Caching:** Integrate a caching layer for common questions and phrases to reduce latency and minimize redundant model API calls.
+
+---
+
 ## Development Mandates (TDD)
 
 This project strictly follows the **Red-Green-Refactor** cycle:
